@@ -1,0 +1,110 @@
+{% extends "index_new.html"%}
+{% block body %}
+     <head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container">
+
+<form id="form2" name="form2" method="post" action="/aa/clg_sign_up/" enctype="multipart/form-data">
+     {% csrf_token %}
+<table>
+  <tr>
+    <td>Name</td>
+    <td>
+      <p>
+
+        <input type="text"class="form-control"name="d_name" id="d_name" required/>
+      </p>
+    </td>
+  </tr>
+
+     <tr>
+    <td>Establishment year</td>
+    <td>
+      <p>
+
+        <input type="text"class="form-control" name="exp_year" id="d_place" required/>
+      </p>
+    </td>
+  </tr>
+
+    <tr>
+    <td>Place</td>
+    <td>
+
+      <input type="text"class="form-control" name="place" id="d_pin" required />
+    </td>
+  </tr>
+
+       <tr>
+    <td>Post</td>
+    <td>
+      <input type="text"class="form-control" name="post" id="d_post" required/>
+    </td>
+  </tr>
+     <tr>
+    <td>city</td>
+    <td>
+      <input type="text"class="form-control" name="city" id="d_phone" required/>
+    </td>
+  </tr>
+
+ <tr>
+    <td>State</td>
+    <td>
+
+      <input type="text"class="form-control" name="state" id="d_email" required/>
+    </td>
+
+  </tr>
+
+
+    <tr>
+    <td>Image</td>
+    <td>
+
+      <input type="file" name="img" id="img" required/>
+    </td>
+  </tr>
+  <tr>
+
+    <tr>
+    <td>Email</td>
+    <td>
+
+      <input type="text" class="form-control"name="email" id="pos"required />
+    </td>
+
+  </tr>
+       <tr>
+    <td>Phone</td>
+    <td>
+
+      <input type="text" class="form-control"name="phone" id="posss"required />
+    </td>
+       </tr>
+      <tr>
+      <td>Password</td>
+      <td><input type="password" class="form-control"name="pwd" id="pos"required /></td>
+    </tr>
+  <tr>
+
+
+
+
+  <tr>
+    <td>&nbsp;</td>
+    <td>
+      <input type="submit" name="button" class="btn" id="button" value="Add" />
+    </td>
+  </tr>
+</table>
+</form>
+    </div></body>
+{% endblock %}

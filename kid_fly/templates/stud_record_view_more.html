@@ -1,0 +1,70 @@
+{% extends "index.html" %}
+{% block body %}
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+<form id="form1" name="form1" method="post" action="">
+  <table width="89%" border="0">
+    <tr>
+      <td colspan="4">&nbsp;</td>
+    </tr>
+    <tr>
+      <td width="24%">Name</td>
+      <td width="32%">&nbsp;{{ res.STUDENT.name }}</td>
+      <td width="19%">Event</td>
+      <td width="25%">&nbsp;{{ res.EVENT.etype }}</td>
+    </tr>
+    <tr>
+      <td>House name</td>
+      <td>&nbsp;{{ res.STUDENT.house }}</td>
+      <td></td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>Post</td>
+      <td>{{ res.STUDENT.post }}&nbsp;</td>
+      <td>Description</td>
+      <td>{{ res.EVENT.descri }}&nbsp;</td>
+    </tr>
+    <tr>
+      <td>Place</td>
+      <td>{{ res.STUDENT.place }}&nbsp;</td>
+      <td>Date</td>
+      <td>&nbsp;{{ res.EVENT.date }}</td>
+    </tr>
+    <tr>
+      <td>City</td>
+      <td>{{ res.STUDENT.city }}&nbsp;</td>
+      <td colspan="2" rowspan="7">&nbsp;</td>
+    </tr>
+    <tr>
+      <td>Gender</td>
+      <td>{{ res.STUDENT.gen }}&nbsp;</td>
+    </tr>
+    <tr>
+      <td>Dob</td>
+      <td>&nbsp;{{ res.STUDENT.dob }}</td>
+    </tr>
+    <tr>
+      <td>Department</td>
+      <td>&nbsp;{{ res.STUDENT.department }}</td>
+    </tr>
+    <tr>
+      <td>Semester</td>
+      <td>{{ res.STUDENT.sem }}&nbsp;</td>
+    </tr>
+    <tr>
+      <td>Phone</td>
+      <td>&nbsp;{{ res.STUDENT.phone }}</td>
+    </tr>
+    <tr>
+      <td>Email</td>
+      <td>&nbsp;{{ res.STUDENT.email }}</td>
+    </tr>
+  </table>
+</form>
+</body>
+{% endblock %}

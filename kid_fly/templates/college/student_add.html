@@ -1,0 +1,136 @@
+{% extends "index_college.html"%}
+{% block body %}
+     <head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container">
+
+<form id="form2" name="form2" method="post" action="/aa/clg_student_add/" enctype="multipart/form-data">
+     {% csrf_token %}
+<table>
+  <tr>
+    <td>Name</td>
+    <td>
+      <p>
+
+        <input type="text"class="form-control"name="name" id="name" required/>
+      </p>
+    </td>
+  </tr>
+
+     <tr>
+    <td>place</td>
+    <td>
+      <p>
+
+        <input type="text"class="form-control" name="place" id="place" required/>
+      </p>
+    </td>
+  </tr>
+    <tr>
+      <td>Gender</td>
+      <td><p>
+          <input type="radio" name="gen" id="gen" value="male" />
+        male</p>
+        <p>
+          <input type="radio" name="gen" id="gen" value="female" />
+          female
+        </p></td>
+    </tr>
+
+
+    <tr>
+    <td>House</td>
+    <td>
+
+      <input type="text"class="form-control" name="house" id="house" required/>
+    </td>
+  </tr>
+
+       <tr>
+    <td>post</td>
+    <td>
+      <input type="text"class="form-control" name="post" id="post" required/>
+    </td>
+  </tr>
+     <tr>
+    <td>city</td>
+    <td>
+      <input type="text"class="form-control" name="city" id="city" required/>
+    </td>
+  </tr>
+
+ <tr>
+    <td>email</td>
+    <td>
+
+      <input type="text"class="form-control" name="email" id="email" required/>
+    </td>
+
+  </tr>
+ <tr>
+    <td>phone</td>
+    <td>
+
+      <input type="text"class="form-control" name="phone" id="phone" required/>
+    </td>
+
+  </tr><tr>
+    <td>Dob</td>
+    <td>
+
+      <input type="text"class="form-control" name="dob" id="dob" required/>
+    </td>
+
+  </tr>
+    <tr>
+    <td>Depatement</td>
+    <td>
+
+      <input type="text"class="form-control" name="department" id="department" required/>
+    </td>
+
+  </tr>
+
+  <tr>
+      <td>sem</td>
+      <td><select name="ty" id="ty" required>
+      <option value="1">1
+       </option>
+      <option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6">6</option>
+
+          </select></td>
+    </tr>
+
+
+    <tr>
+    <td>Image</td>
+    <td>
+
+      <input type="file" name="img" id="image" required/>
+    </td>
+  </tr>
+  <tr>
+
+
+
+  <tr>
+    <td>&nbsp;</td>
+    <td>
+      <input type="submit" name="button" class="btn" id="button" value="Add" />
+    </td>
+  </tr>
+</table>
+</form>
+    </div></body>
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends "index.html" %}
+{% block body %}
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+<table width="50%" border="0">
+  <tr>
+    <td>Slno</td>
+    <td>Name</td>
+    <td>Description</td>
+  </tr>
+    {% for i in res %}
+  <tr>
+    <td>&nbsp;{{ forloop.counter }}</td>
+    <td>{{ i.name }}&nbsp;</td>
+    <td>&nbsp;{{ i.description }}</td>
+  <td><a href="/aa/sports_update/{{ i.pk }}">Update</a><br><a href="/aa/sports_del/{{ i.pk }}">Delete</a> </td>
+  </tr>
+    {% endfor %}
+</table>
+</body>
+{% endblock %}

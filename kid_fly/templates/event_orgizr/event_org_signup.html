@@ -1,0 +1,82 @@
+{% extends "index_new.html"%}
+{% block body %}
+     <head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container">
+
+<form id="form2" name="form2" method="post" action="/aa/event_orgr_signup/" enctype="multipart/form-data">
+     {% csrf_token %}
+<table>
+  <tr>
+    <td>Name</td>
+    <td>
+      <p>
+
+        <input type="text"class="form-control"name="name" id="name" required/>
+      </p>
+    </td>
+  </tr>
+
+     <tr>
+    <td>Phone</td>
+    <td>
+      <p>
+
+        <input type="text"class="form-control" name="phone" id="ph" required/>
+      </p>
+    </td>
+  </tr>
+
+
+
+    <tr>
+    <td>Email</td>
+    <td>
+
+      <input type="text"class="form-control" name="email" id="email" required/>
+    </td>
+  </tr>
+
+       <tr>
+    <td>Details</td>
+    <td>
+      <input type="text"class="form-control" name="details" id="details" required/>
+    </td>
+  </tr>
+     <tr>
+    <td>Desiganation</td>
+    <td>
+      <input type="text"class="form-control" name="desi" id="desi" required/>
+    </td>
+  </tr>
+
+
+
+    <tr>
+    <td>Image</td>
+    <td>
+
+      <input type="file" name="image" id="image" required/>
+    </td>
+  </tr>
+  <tr>
+
+
+
+  <tr>
+    <td>&nbsp;</td>
+    <td>
+      <input type="submit" name="button" class="btn" id="button" value="Add" />
+    </td>
+  </tr>
+</table>
+</form>
+    </div></body>
+{% endblock %}

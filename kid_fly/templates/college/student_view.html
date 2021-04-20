@@ -1,0 +1,53 @@
+{% extends "index_college.html"%}
+{% block body %}
+     <head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container">
+
+<form id="form1" name="form1" method="post" action="">
+{% csrf_token %}
+ <tr>
+    <td colspan="2">Name</td>
+    <td colspan="3"><label for="textfield"></label>
+      <input type="text" name="ser" id="textfield" /></td>
+    <td colspan="2"><input type="submit" name="button" id="button" value="Search" /></td>
+    </tr>
+
+<table class="table">
+  <tr>
+    <td>slno</td>
+    <td>Name</td>
+    <td>place</td>
+    <td>house</td>
+    <td>post</td>
+    <td>city</td>
+      <td>email</td>
+      <td>phone</td>
+  </tr>
+    {% for i in res %}
+  <tr>
+    <td>{{ forloop.counter }}</td>
+    <td>{{ i.name }}</td>
+    <td>{{ i.place }}</td>
+    <td>{{ i.house }}</td>
+    <td>{{ i.post }}</td>
+    <td>{{ i.city }}</td>
+      <td>{{ i.email }}</td>
+    <td>{{ i.phone }}</td>
+    <td><a href="/aa/clg_student_edit/{{ i.id }}">edit</a></td>
+    <td><a href="/aa/clg_student_del/{{ i.id }}">delete</a></td>
+
+
+  </tr>
+      {% endfor %}
+</table>
+</form>
+    </div></body>
+{% endblock %}

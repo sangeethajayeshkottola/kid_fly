@@ -1,0 +1,48 @@
+{% extends "index.html" %}
+{% block body %}
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+<form id="form1" name="form1" method="post" action="/aa/adm_college_view/">
+    {% csrf_token %}
+<table width="71%" border="0">
+  <tr>
+    <td colspan="3">College name</td>
+    <td colspan="4"><label for="textfield"></label>
+      <input type="text" name="ser" id="textfield" /></td>
+    <td colspan="3"><input type="submit" name="button" id="button" value="search" /></td>
+    </tr>
+  <tr>
+    <td>sl no</td>
+    <td>Image</td>
+    <td>Name</td>
+    <td>Place</td>
+    <td>Post</td>
+    <td>City</td>
+    <td>State</td>
+    <td>Phone no</td>
+    <td>Email</td>
+    <td>&nbsp;</td>
+  </tr>
+    {% for i in res %}
+  <tr>
+    <td>&nbsp;{{ forloop.counter }}</td>
+    <td><img src="{{ i.img }}"  width="100" height="100" alt=""/></td>
+    <td>{{ i.name }}&nbsp;</td>
+    <td>&nbsp;{{ i.place }}</td>
+    <td>{{ i.post }}&nbsp;</td>
+    <td>{{ i.city }}&nbsp;</td>
+    <td>&nbsp;{{ i.state }}</td>
+    <td>&nbsp;{{ i.phone }}</td>
+    <td>&nbsp;{{ i.email }}</td>
+    <td><a href="/aa/adm_college_view_more/{{ i.pk }}">View more</a></td>
+  </tr>
+    {% endfor %}
+</table>
+</form>
+
+</body>
+{% endblock %}

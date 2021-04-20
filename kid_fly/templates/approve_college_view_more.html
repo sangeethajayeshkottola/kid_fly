@@ -1,0 +1,59 @@
+{% extends "index.html" %}
+{% block body %}
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+<form id="form1" name="form1" method="post" action="/aa/adm_college_approve_reject/">
+        {% csrf_token %}
+<table width="50%" border="0">
+  <tr>
+    <td colspan="2">&nbsp;</td>
+    </tr>
+  <tr>
+    <td>Name</td>
+    <td>&nbsp;{{ i.name }}</td>
+  </tr>
+  <tr>
+    <td>Place</td>
+    <td>{{ i.place }}&nbsp;</td>
+  </tr>
+  <tr>
+    <td>Post</td>
+    <td>{{ i.post }}&nbsp;</td>
+  </tr>
+  <tr>
+    <td>City</td>
+    <td>&nbsp;{{ i.city }}</td>
+  </tr>
+  <tr>
+    <td>State</td>
+    <td>&nbsp;{{ i.state }}</td>
+  </tr>
+  <tr>
+    <td>Established year</td>
+    <td>&nbsp;{{ i.ext_year }}</td>
+  </tr>
+  <tr>
+    <td>Phone no</td>
+    <td>{{ i.phone }}&nbsp;</td>
+  </tr>
+  <tr>
+    <td>Email</td>
+    <td>&nbsp;{{ i.email }}</td>
+  </tr>
+  <tr>
+    <td>Status</td>
+    <td>&nbsp;{{ i.status }}</td>
+  </tr>
+  <tr>
+    <td><input type="submit" name="btn" id="button" value="Approve" /></td>
+    <td><input type="submit" name="btn" id="button2" value="Reject" /></td>
+  </tr>
+</table>
+</form>
+
+</body>
+{% endblock %}

@@ -1,0 +1,42 @@
+{% extends "index.html" %}
+{% block body %}
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+<form id="form1" name="form1" method="post" action="/aa/adm_student_view/">
+    {% csrf_token %}
+<table width="66%" border="0">
+  <tr>
+    <td colspan="2">Student name</td>
+    <td colspan="3"><label for="textfield"></label>
+      <input type="text" name="ser" id="textfield" /></td>
+    <td colspan="2"><input type="submit" name="button" id="button" value="Search" /></td>
+    </tr>
+  <tr>
+    <td>Slno</td>
+    <td>Name </td>
+    <td>Email</td>
+    <td>Phone</td>
+    <td>Department</td>
+    <td>College</td>
+    <td>&nbsp;</td>
+  </tr>
+    {% for i in res %}
+  <tr>
+    <td>{{ forloop.counter }}&nbsp;</td>
+    <td>{{ i.name }}&nbsp;</td>
+    <td>&nbsp;{{ i.email }}</td>
+    <td>{{ i.phone }}&nbsp;</td>
+    <td>&nbsp;{{ i.department }}</td>
+    <td>{{ i.COLLEGE.name }}&nbsp;</td>
+    <td><a href="/aa/adm_student_view_more/{{ i.pk }}">participation</a></td>
+  </tr>
+    {% endfor %}
+</table>
+</form>
+
+</body>
+{% endblock %}
