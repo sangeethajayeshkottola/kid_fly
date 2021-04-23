@@ -9,9 +9,9 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 <body>
-    <div class="container">
+    <div class="container"><br><br>
 
-<form id="form1" name="form1" method="post" action="">
+<form id="form1" name="form1" align="center" method="post" action="">
 {% csrf_token %}
  <tr>
     <td colspan="2">Name</td>
@@ -19,29 +19,33 @@
       <input type="text" name="ser" id="textfield" /></td>
     <td colspan="2"><input type="submit" name="button" id="button" value="Search" /></td>
     </tr>
-<table class="table">
+<h2 align="center">STUDENT RECORDS VIEW</h2>
+<table class="table table-bordered" style="width: 400px" align="center" border="0">
   <tr>
-    <td>Id</td>
-    <td>Name</td>
-    <td>Dob</td>
-    <td>gender</td>
-    <td>Place</td>
-    <td>City</td>
-      <td>State</td>
-      <td>Pin</td>
+    <th>slno</th>
+    <th>Name</th>
+    <th>place</th>
+    <th>house</th>
+    <th>post</th>
+    <th>city</th>
+      <th>email</th>
+      <th>phone</th>
+      <th>Action</th>
+      <th>Action</th>
+      <th></th>
   </tr>
     {% for i in res %}
   <tr>
-    <td>{{ i.id }}</td>
+    <td>{{ forloop.counter }}</td>
     <td>{{ i.name }}</td>
-    <td>{{ i.dob }}</td>
-    <td>{{ i.gen }}</td>
     <td>{{ i.place }}</td>
+    <td>{{ i.house }}</td>
+    <td>{{ i.post }}</td>
     <td>{{ i.city }}</td>
-      <td>{{ i.state }}</td>
-    <td>{{ i.pin }}</td>
-    <td><a href="/aa/clg_staff_edit/{{ i.id }}">edit</a></td>
-    <td><a href="/aa/clg_staff_del/{{ i.id }}">delete</a></td>
+      <td>{{ i.email }}</td>
+    <td>{{ i.phone }}</td>
+    <td><a href="/aa/clg_student_edit/{{ i.id }}">Edit</a></td>
+    <td><a href="/aa/clg_student_del/{{ i.id }}">Delete</a></td>
 
 
   </tr>

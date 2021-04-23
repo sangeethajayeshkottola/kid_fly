@@ -2,6 +2,7 @@ from django.shortcuts import render,redirect
 from django.http import HttpResponse, Http404
 from django.core.files.storage import FileSystemStorage
 from django.views.decorators.csrf import csrf_exempt
+import datetime
 
 
 from .models import loginmodel,studentmodel,collegemodel,chat,notificationmodel,sports_catmodel,sports_profilemodel,assign_cate_model,staffmodel,complaintmodel,collegeteammodel,schedulemodel,team_member_model,motivationmodel,participantmodel,usermodel,gallerymodel,nutritionmodel,eventmodel,nutritionallocationmodel,msg_nutitionnist_model,eventorgizermodel
@@ -375,6 +376,39 @@ def clg_signup(request):
         return render(request, "login.html")
 
     return render(request, 'college/college_signup.html')
+
+def add_event(request):
+    if request.method=='POST':
+        event_type=request.POST['etype']
+        descrip=request.POST['des']
+        dat=request.POST['date']
+        res=eventmodel(etype=event_type,descri=descrip,date=dat)
+        res.save()
+    return render(request,"college/add_event.html")
+def view_event(request):
+    res=eventmodel.objects.all()
+    return render(request,"college/view_event.html",{'res':res})
+def delete_event(request,id):
+    res=eventmodel.objects.get(id=id)
+    res.delete()
+    return redirect("/aa/view_event/")
+def edit_event(request,id):
+    res=eventmodel.objects.get(id=id)
+    request.session['id']=id
+    return render(request,"college/edit_event.html",{'res':res})
+def edit_event_post(request):
+    id=request.session['id']
+    if request.method=='POST':
+        res=eventmodel.objects.get(id=id)
+        event_type = request.POST['etype']
+        descrip = request.POST['des']
+        dat = request.POST['date']
+        res.etype=event_type
+        res.descri=descrip
+        res.date=dat
+        res.save()
+        return redirect("/aa/view_event/")
+    return redirect("/aa/view_event/")
 
 
 def clg_staff_add(request):

@@ -13,13 +13,14 @@
 
 <form id="form2" name="form2" method="post" action="/aa/clg_staff_add/" enctype="multipart/form-data">
      {% csrf_token %}
-<table>
+    <h1 align="center"> ADD STAFF</h1>
+<table class="table table-bordered" style="width: 400px" align="center" border="0">
   <tr>
     <td>Name</td>
     <td>
       <p>
+        <input type="text"class="form-control" name="name" id="dob" class="form-control" required/>
 
-        <input type="text"class="form-control"name="name" id="name" required/>
       </p>
     </td>
   </tr>
@@ -29,7 +30,7 @@
     <td>
       <p>
 
-        <input type="text"class="form-control" name="dob" id="dob" required/>
+        <input type="text"class="form-control" name="dob" id="dob" class="form-control" required/>
       </p>
     </td>
   </tr>
@@ -76,10 +77,10 @@
   </tr>
   <tr>
       <td>Type</td>
-      <td><select name="ty" id="ty" required>
-      <option value="nonteacher">nonteacher
+      <td><select name="ty" id="ty" required  class="form-control>
+      <option value="Physical Trainer">Physical Trainer
        </option>
-      <option value="teacher">Teacher</option>
+      <option value="Nutritionist">Nutritionist</option>
 
           </select></td>
     </tr>

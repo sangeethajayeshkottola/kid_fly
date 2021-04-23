@@ -2,13 +2,14 @@
 {% block body %}
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Untitled Document</title>
+<title>APPROVE COLLEGE</title>
 </head>
 
 <body>
 <form id="form1" name="form1" method="post" action="/aa/adm_college_view/">
     {% csrf_token %}
-<table width="71%" border="0">
+<h1 align="center">APPROVE COLLEGE</h1>
+<table class="table table-bordered" style="width: 1000px" border="0">
   <tr>
     <td colspan="3">College name</td>
     <td colspan="4"><label for="textfield"></label>
@@ -16,16 +17,17 @@
     <td colspan="3"><input type="submit" name="button" id="button" value="search" /></td>
     </tr>
   <tr>
-    <td>sl no</td>
-    <td>Image</td>
-    <td>Name</td>
-    <td>Place</td>
-    <td>Post</td>
-    <td>City</td>
-    <td>State</td>
-    <td>Phone no</td>
-    <td>Email</td>
-    <td>&nbsp;</td>
+    <th>sl no</th>
+    <th>Image</th>
+    <th>Name</th>
+    <th>Place</th>
+    <th>Post</th>
+    <th>City</th>
+    <th>State</th>
+    <th>Phone no</th>
+    <th>Email</th>
+      <th>Action</th>
+    <th>&nbsp;</th>
   </tr>
     {% for i in res %}
   <tr>

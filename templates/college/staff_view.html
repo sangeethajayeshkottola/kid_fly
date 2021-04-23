@@ -10,8 +10,8 @@
 </head>
 <body>
     <div class="container">
-
-<form id="form1" name="form1" method="post" action="">
+<br><br>
+<form id="form1" align="center" align="center"name="form1" method="post" action="">
 {% csrf_token %}
  <tr>
     <td colspan="2">Name</td>
@@ -19,30 +19,33 @@
       <input type="text" name="ser" id="textfield" /></td>
     <td colspan="2"><input type="submit" name="button" id="button" value="Search" /></td>
     </tr>
-
-<table class="table">
+<h1 align="center">VIEW STAFF</h1>
+<table class="table table-bordered" style="width: 400px" align="center" border="0" >
   <tr>
-    <td>slno</td>
-    <td>Name</td>
-    <td>place</td>
-    <td>house</td>
-    <td>post</td>
-    <td>city</td>
-      <td>email</td>
-      <td>phone</td>
+    <th>Sl No</th>
+    <th>Name</th>
+    <th>Dob</th>
+    <th>gender</th>
+    <th>Place</th>
+    <th>City</th>
+      <th>State</th>
+      <th>Pin</th>
+      <th>Action</th>
+      <th>Action</th>
+      <th></th>
   </tr>
     {% for i in res %}
   <tr>
     <td>{{ forloop.counter }}</td>
     <td>{{ i.name }}</td>
+    <td>{{ i.dob }}</td>
+    <td>{{ i.gen }}</td>
     <td>{{ i.place }}</td>
-    <td>{{ i.house }}</td>
-    <td>{{ i.post }}</td>
     <td>{{ i.city }}</td>
-      <td>{{ i.email }}</td>
-    <td>{{ i.phone }}</td>
-    <td><a href="/aa/clg_student_edit/{{ i.id }}">edit</a></td>
-    <td><a href="/aa/clg_student_del/{{ i.id }}">delete</a></td>
+      <td>{{ i.state }}</td>
+    <td>{{ i.pin }}</td>
+    <td><a href="/aa/clg_staff_edit/{{ i.id }}">Edit</a></td>
+    <td><a href="/aa/clg_staff_del/{{ i.id }}">Delete</a></td>
 
 
   </tr>

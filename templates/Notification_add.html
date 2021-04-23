@@ -8,17 +8,18 @@
 <body>
 <form id="form1" name="form1" method="post" action="">
         {% csrf_token %}
-  <table width="50%" border="0">
+    <h1 align="center">ADD NOTIFICATION</h1>
+  <table class="table table-bordered">
     <tr>
-      <td>Message</td>
-      <td><label for="textfield"></label>
-      <input type="text" name="textfield" id="textfield" required/></td>
+      <th>Message</th>
+      <td>
+      <input type="text"  class="form-control" name="textfield" id="textfield" required/></td>
     </tr>
 
 
     <tr>
       <td colspan="2"><div align="center">
-        <input type="submit" name="button" id="button" value="Add" />
+        <input type="submit" name="button" id="button" class="btn btn-success" value="Add" />
       </div></td>
     </tr>
   </table>

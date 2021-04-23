@@ -1,0 +1,31 @@
+{% extends "index.html" %}
+{% block body %}
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+<br><br>
+
+<form id="form1" name="form1" method="post" action="/aa/sports_add/">
+      {% csrf_token %}
+    <h1 align="center">ADD SPORTS CATEGORY</h1>
+  <table class="table table-bordered" >
+    <tr>
+      <td width="30px">Name</td>
+      <td width="64%">&nbsp;<input type="text"name="sname"id="sname" class="form-control" required> </td>
+    </tr>
+    <tr>
+      <td >Description</td>
+      <td><input type="text"name="dis"id="des" required class="form-control"> &nbsp;</td>
+    </tr>
+    <tr>
+      <td colspan="2"><div align="center">
+        <input type="submit" name="button" id="button" class="btn btn-success" value="Add" />
+      </div></td>
+    </tr>
+  </table>
+</form>
+</body>
+{% endblock %}

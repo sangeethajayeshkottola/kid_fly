@@ -6,6 +6,11 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('', views.lg),
     path('adm_home/', views.adm_home),
+    path('add_event/',views.add_event),
+    path('view_event/',views.view_event),
+    path('delete_event/<int:id>',views.delete_event),
+    path('edit_event/<int:id>', views.edit_event),
+    path('edit_event_post/',views.edit_event_post),
 
     path('sports_add/', views.adm_spots_Cat),
     path('sports_view/', views.adm_spots_Cat_view),

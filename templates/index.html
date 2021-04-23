@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-
+ 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>AdminLTE 2 | Dashboard</title>
@@ -47,7 +47,7 @@
       <!-- mini logo for sidebar mini 50x50 pixels -->
       <span class="logo-mini"><b>A</b>LT</span>
       <!-- logo for regular state and mobile devices -->
-      <span class="logo-lg"><b>Kids</b>To Fly</span>
+        <b class="logo-lg">Athlete</b></span>
     </a>
     <!-- Header Navbar: style can be found in header.less -->
     <nav class="navbar navbar-static-top">
@@ -259,7 +259,7 @@
           <li class="dropdown user user-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               <img src="/static/main_template/dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
-              <span class="hidden-xs">COLLEGE</span>
+              <span class="hidden-xs">ADMIN</span>
             </a>
             <ul class="dropdown-menu">
               <!-- User image -->
@@ -315,7 +315,7 @@
           <img src="/static/main_template/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
         </div>
         <div class="pull-left info">
-          <p>COLLEGE</p>
+          <p>ADMIN</p>
           <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
         </div>
       </div>
@@ -333,7 +333,7 @@
       <!-- sidebar menu: : style can be found in sidebar.less -->
       <ul class="sidebar-menu" data-widget="tree">
         <li class="header">MAIN NAVIGATION</li>
-          <li><a href="/aa/clg_home/"><i class="fa fa-circle-o text-red"></i> <span>Home</span></a></li>
+          <li><a href="/aa/adm_home"><i class="fa fa-circle-o text-red"></i> <span>Home</span></a></li>
 
 {#          <li class="active treeview">#}
 {#          <a href="/adm_home">#}
@@ -349,18 +349,29 @@
 {#        </li>#}
 
 
-
+        <li class="active treeview">
+          <a href="#">
+            <i class="fa fa-dashboard"></i> <span>Sports</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li class="active"><a href="/aa/sports_add/"><i class="fa fa-circle-o"></i>Add</a></li>
+            <li><a href="/aa/sports_view/"><i class="fa fa-circle-o"></i>View</a></li>
+          </ul>
+        </li>
         <li class="treeview">
           <a href="#">
             <i class="fa fa-files-o"></i>
-            <span>Staff</span>
+            <span>Notification</span>
             <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="/aa/clg_staff_add/"><i class="fa fa-circle-o"></i> Add </a></li>
-            <li><a href="/aa/clg_staff_view/"><i class="fa fa-circle-o"></i> View </a></li>
+            <li><a href="/aa/noti_add/"><i class="fa fa-circle-o"></i> Add </a></li>
+            <li><a href="/aa/noti_view/"><i class="fa fa-circle-o"></i> View </a></li>
           </ul>
         </li>
 
@@ -374,39 +385,53 @@
             </span>
           </a>
           <ul class="treeview-menu">
-
-            <li><a href="/aa/clg_student_add/"><i class="fa fa-circle-o"></i> Add</a></li>
-              <li><a href="/aa/clg_student_view/"><i class="fa fa-circle-o"></i> View</a></li>
+            
+            <li><a href="/aa/adm_student_view/"><i class="fa fa-circle-o"></i> View</a></li>
           </ul>
         </li>
 
  <li class="treeview">
           <a href="#">
             <i class="fa fa-files-o"></i>
-            <span>Assign phisical Trainers</span>
+            <span>College</span>
+            <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            
+            <li><a href="/aa/adm_college_view/"><i class="fa fa-circle-o"></i> View</a></li>
+          </ul>
+        </li>
+
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-files-o"></i>
+            <span>Career Experts</span>
+            <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+          
+            <li><a href="/aa/adm_careerexp_view/"><i class="fa fa-circle-o"></i> View</a></li>
+          </ul>
+        </li>
+
+          <li class="treeview">
+          <a href="#">
+            <i class="fa fa-files-o"></i>
+            <span>Event Organizer</span>
             <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
           <ul class="treeview-menu">
 
-            <li><a href="/aa/clg_assign_phycaltrainr/"><i class="fa fa-circle-o"></i>Assign</a></li>
+            <li><a href="/aa/adm_evntorgr_view/"><i class="fa fa-circle-o"></i> View</a></li>
           </ul>
         </li>
 
-{#        <li class="treeview">#}
-{#          <a href="#">#}
-{#            <i class="fa fa-files-o"></i>#}
-{#            <span>Career Experts</span>#}
-{#            <span class="pull-right-container">#}
-{#                <i class="fa fa-angle-left pull-right"></i>#}
-{#            </span>#}
-{#          </a>#}
-{#          <ul class="treeview-menu">#}
-{##}
-{#            <li><a href="/aa/adm_careerexp_view/"><i class="fa fa-circle-o"></i> View</a></li>#}
-{#          </ul>#}
-{#        </li>#}
 {#<li class="treeview">#}
 {#          <a href="#">#}
 {#            <i class="fa fa-files-o"></i>#}
@@ -526,7 +551,7 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        College
+        ADMIN
         <small></small>
       </h1>
 {#      <ol class="breadcrumb">#}

@@ -1,0 +1,44 @@
+{% extends "index.html" %}
+{% block body %}
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>APPROVE EVENT ORGANIZERS</title>
+</head>
+
+<body>
+<form id="form1" name="form1" method="post" action="/aa/adm_evntorgr_view/">
+<h1 align="center">APPROVE EVENT ORGANIZERS</h1>
+<tableble class="table table-bordered">
+    {% csrf_token %}
+  <tr>
+    <td colspan="2">Type</td>
+    <td colspan="2"><label for="textfield"></label>
+      <input type="text" name="ser" id="textfield" /></td>
+    <td colspan="2"><input type="submit" name="button" id="button" class="btn btn-success" value="Search" /></td>
+    </tr>
+  <tr></tableble>
+    <table class="table table-bordered" >
+
+    <th>Sl no</th>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Phone</th>
+    <th>Email id</th>
+      <th>Action</th>
+    <th>&nbsp;</th>
+  </tr>
+    {% for i in res %}
+  <tr>
+    <td>&nbsp;{{ forloop.counter }}</td>
+    <td>{{ i.name }}&nbsp;</td>
+    <td>{{ i.details }}&nbsp;</td>
+    <td>{{ i.ph }}&nbsp;</td>
+    <td>&nbsp;{{ i.email }}</td>
+    <td><a href="/aa/adm_evntorgr_view_more/{{ i.pk }}" class="btn btn-primary">View more</a></td>
+  </tr>
+    {% endfor %}
+</table>
+
+</form>
+</body>
+{% endblock %}
