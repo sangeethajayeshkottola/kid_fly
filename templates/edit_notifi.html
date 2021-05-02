@@ -2,23 +2,23 @@
 {% block body %}
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>EDIT NOTIFICATION</title>
+<title>Untitled Document</title>
 </head>
 
 <body>
 <form id="form1" name="form1" method="post" action="/aa/noti_update_post/">
-    <h1 align="center">EDIT NOTIFICATION</h1>
-  <table class="table table-bordered" >
+    <h2 align="center">EDIT NOTIFICATION</h2>
+  <table class="table table-bordered" width="400px"align="center" border="0">
       {% csrf_token %}
     <tr>
       <td>Message</td>
-      <td>
-      <input type="text" name="textfield" id="textfield" value="{{ res.msg }}" required  class="form-control" /></td>
+      <td><label for="textfield"></label>
+      <input type="text" name="textfield" id="textfield" value="{{ res.msg }}" required /></td>
     </tr>
 
     <tr>
       <td colspan="2"><div align="center">
-        <input type="submit" name="button" id="button" class="btn btn-success" value="Update" />
+        <input type="submit" name="button" id="button" value="Update" />
       </div></td>
     </tr>
   </table>

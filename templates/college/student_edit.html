@@ -13,8 +13,8 @@
 
 <form id="form2" name="form2" method="post" action="/aa/clg_student_edit_post/" enctype="multipart/form-data">
      {% csrf_token %}
-<h1 align="center">EDIT STUDENTS RECORDS</h1>
-<table  class="table table-bordered" style="width: 400px" align="center" border="0">
+<h2 align="center">STUDENT EDIT</h2>
+<table border="1" align="center">
   <tr>
     <td>Name</td>
     <td>
@@ -35,27 +35,27 @@
     </td>
   </tr>
     <tr>
-        <td>gender</td>
+        <td>Gender</td>
          <td>
           {% if res.gen == "male" %}
 
-          male<input type="radio" name="gen" id="gen1" value="male" checked="checked"/><br/>
+          Male<input type="radio" name="gen" id="gen1" value="male" checked="checked"/><br/>
 
 
-            female<input type="radio" name="gen" id="gen2" value="female" />
+            Female<input type="radio" name="gen" id="gen2" value="female" />
 
         {% else %}
 
-        male<input type="radio" name="gen" id="gen3" value="male"/><br/>
+        Male<input type="radio" name="gen" id="gen3" value="male"/><br/>
 
-        female<input type="radio" name="gen" id="gen4" value="female" checked="checked"/><br/>
+        Female<input type="radio" name="gen" id="gen4" value="female" checked="checked"/><br/>
         {% endif %}
         </td>
       </tr>
 
 
     <tr>
-    <td>House</td>
+    <td>House Name</td>
     <td>
 
       <input type="text"class="form-control" name="house" id="house" value="{{ res.house }}" required/>
@@ -63,20 +63,20 @@
   </tr>
 
        <tr>
-    <td>post</td>
+    <td>Post</td>
     <td>
       <input type="text"class="form-control" name="post" id="post" value="{{ res.post }}" required/>
     </td>
   </tr>
      <tr>
-    <td>city</td>
+    <td>City</td>
     <td>
       <input type="text"class="form-control" name="city" id="city" value="{{ res.city }}" required/>
     </td>
   </tr>
 
  <tr>
-    <td>email</td>
+    <td>Email</td>
     <td>
 
       <input type="text"class="form-control" name="email" id="email" value="{{ res.email }}" readonly required/>
@@ -84,7 +84,7 @@
 
   </tr>
  <tr>
-    <td>phone</td>
+    <td>Phone</td>
     <td>
 
       <input type="text"class="form-control" name="phone" id="phone" value="{{ res.phone }}" required/>
@@ -94,7 +94,7 @@
     <td>Dob</td>
     <td>
 
-      <input type="text"class="form-control" name="dob" id="dob" value="{{ res.dob }}" required/>
+      <input type="date"class="form-control" name="dob" id="dob" value="{{ res.dob }}" required/>
     </td>
 
   </tr>
@@ -108,7 +108,7 @@
   </tr>
  
   <tr>
-      <td>sem</td>
+      <td>Semester</td>
       <td><select name="ty" id="ty" required>
       <option value="1">1
        </option>

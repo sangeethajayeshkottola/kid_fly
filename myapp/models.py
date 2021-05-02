@@ -144,8 +144,10 @@ class schedulemodel(models.Model):
 class eventmodel(models.Model):
 
     date = models.CharField(max_length=50)
+    ename = models.CharField(max_length=50)
     descri = models.CharField(max_length=250)
     etype = models.CharField(max_length=250)
+    COLLEGE=models.ForeignKey(collegemodel, on_delete=models.CASCADE, )
 
     class Meta:
         db_table = "event"
@@ -190,7 +192,7 @@ class gallerymodel(models.Model):
         db_table = "gallery"
 
 class nutritionmodel(models.Model):
-    COLLEGE = models.ForeignKey(collegeteammodel, on_delete=models.CASCADE, )
+    CLG = models.ForeignKey(collegemodel, on_delete=models.CASCADE, )
 
     name = models.CharField(max_length=50)
     descri = models.CharField(max_length=250)
@@ -222,10 +224,10 @@ class msg_nutitionnist_model(models.Model):
 
 class chat(models.Model):
     message = models.CharField(max_length=300)
-    datee = models.CharField(max_length=100)
+    date = models.CharField(max_length=100)
     type =  models.CharField(max_length=100)
-    SID = models.ForeignKey(studentmodel, on_delete=models.CASCADE)
-    UID=models.ForeignKey(usermodel, on_delete=models.CASCADE)
+    FID = models.ForeignKey(staffmodel, on_delete=models.CASCADE)
+    UID=models.ForeignKey(studentmodel, on_delete=models.CASCADE)
 
     class Meta:
         db_table = "chatuser"

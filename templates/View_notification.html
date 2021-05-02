@@ -2,13 +2,13 @@
 {% block body %}
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>VIEW NOTIFICATION</title>
+<title>Untitled Document</title>
 </head>
 
 <body>
-<form id="form1" name="form1 man" method="post" action="">
-<h1 align="center">VIEW NOTIFICATION</h1>
-  <table class="table table-bordered" >
+<form id="form1" name="form1" method="post" action="">
+<h2 align="center">VIEW NOTIFICATION</h2>
+  <table class="table table-bordered" width="400px"align="center" border="0">
 
     <tr>
       <th>Sl no</th>
@@ -16,15 +16,14 @@
       <th>Date</th>
       <th>Action</th>
       <th>Action</th>
-        <th></th>
     </tr>
       {% for i in res %}
     <tr>
       <td>{{ forloop.counter }}&nbsp;</td>
       <td>&nbsp;{{ i.msg }}</td>
-      <td>{{ i.datee }}</td>
-      <td><a href="/aa/noti_update/{{ i.pk }}" class="btn btn-success">Edit</a></td>
-      <td><a href="/aa/noti_del/{{ i.pk }}"  class="btn btn-danger">Delete</a></td>
+      <td>{{ i.date }}</td>
+      <td><a href="/aa/noti_update/{{ i.pk }}">Edit</a></td>
+      <td><a href="/aa/noti_del/{{ i.pk }}">Delete</a></td>
 
     </tr>
       {% endfor %}

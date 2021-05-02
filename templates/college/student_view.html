@@ -9,27 +9,29 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 <body>
-    <div class="container"><br><br>
+    <div class="container">
 
-<form id="form1" name="form1" align="center" method="post" action="">
+<form id="form1" name="form1" method="post" action="">
 {% csrf_token %}
+
+<table align="center">
  <tr>
     <td colspan="2">Name</td>
     <td colspan="3"><label for="textfield"></label>
       <input type="text" name="ser" id="textfield" /></td>
     <td colspan="2"><input type="submit" name="button" id="button" value="Search" /></td>
-    </tr>
-<h2 align="center">STUDENT RECORDS VIEW</h2>
-<table class="table table-bordered" style="width: 400px" align="center" border="0">
+    </tr></table>
+<h2 align="center">STUDENT VIEW</h2>
+<table class="table table-bordered" width="400px"align="center" border="0">
   <tr>
-    <th>slno</th>
+    <th>Slno</th>
     <th>Name</th>
-    <th>place</th>
-    <th>house</th>
-    <th>post</th>
-    <th>city</th>
-      <th>email</th>
-      <th>phone</th>
+    <th>Place</th>
+    <th>House Name</th>
+    <th>Post</th>
+    <th>City</th>
+      <th>Email</th>
+      <th>Phone</th>
       <th>Action</th>
       <th>Action</th>
       <th></th>

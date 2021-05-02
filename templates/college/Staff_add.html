@@ -13,14 +13,14 @@
 
 <form id="form2" name="form2" method="post" action="/aa/clg_staff_add/" enctype="multipart/form-data">
      {% csrf_token %}
-    <h1 align="center"> ADD STAFF</h1>
-<table class="table table-bordered" style="width: 400px" align="center" border="0">
+    <h2 align="center">ADD STAFF</h2>
+<table border="1" align="center">
   <tr>
     <td>Name</td>
     <td>
       <p>
-        <input type="text"class="form-control" name="name" id="dob" class="form-control" required/>
 
+        <input type="text"class="form-control"name="name" id="name" required/>
       </p>
     </td>
   </tr>
@@ -30,7 +30,7 @@
     <td>
       <p>
 
-        <input type="text"class="form-control" name="dob" id="dob" class="form-control" required/>
+        <input type="date"class="form-control" name="dob" id="dob" required/>
       </p>
     </td>
   </tr>
@@ -38,10 +38,10 @@
       <td>Gender</td>
       <td><p>
           <input type="radio" name="gen" id="gen" value="male" />
-        male</p>
+        Male</p>
         <p>
           <input type="radio" name="gen" id="gen" value="female" />
-          female
+          Female
         </p></td>
     </tr>
 
@@ -55,20 +55,20 @@
   </tr>
 
        <tr>
-    <td>city</td>
+    <td>City</td>
     <td>
       <input type="text"class="form-control" name="city" id="city" required/>
     </td>
   </tr>
      <tr>
-    <td>state</td>
+    <td>State</td>
     <td>
       <input type="text"class="form-control" name="state" id="state" required/>
     </td>
   </tr>
 
  <tr>
-    <td>pin</td>
+    <td>Pincode</td>
     <td>
 
       <input type="text"class="form-control" name="pin" id="pin" required/>
@@ -77,10 +77,10 @@
   </tr>
   <tr>
       <td>Type</td>
-      <td><select name="ty" id="ty" required  class="form-control>
-      <option value="Physical Trainer">Physical Trainer
+      <td><select name="ty" id="ty" required>
+      <option value="nut">Nutritionist
        </option>
-      <option value="Nutritionist">Nutritionist</option>
+      <option value="phy">physical trainer</option>
 
           </select></td>
     </tr>
@@ -96,7 +96,7 @@
   <tr>
 
     <tr>
-    <td>email</td>
+    <td>Email</td>
     <td>
 
       <input type="text" class="form-control"name="email" id="email"required />
@@ -105,7 +105,7 @@
   </tr>
 
 <tr>
-    <td>phone</td>
+    <td>Phone</td>
     <td>
 
       <input type="text" class="form-control"name="phone" id="phone"required />

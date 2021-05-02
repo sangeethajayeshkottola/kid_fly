@@ -13,8 +13,8 @@
 
 <form id="form2" name="form2" method="post" action="/aa/clg_student_add/" enctype="multipart/form-data">
      {% csrf_token %}
-    <h1 align="center">ADD STUDENTS</h1>
-<table  class="table table-bordered">>
+    <h2 align="center">ADD STUDENTS</h2>
+<table border="1" align="center">
   <tr>
     <td>Name</td>
     <td>
@@ -26,7 +26,7 @@
   </tr>
 
      <tr>
-    <td>place</td>
+    <td>Place</td>
     <td>
       <p>
 
@@ -38,16 +38,16 @@
       <td>Gender</td>
       <td><p>
           <input type="radio" name="gen" id="gen" value="male" />
-        male</p>
+        Male</p>
         <p>
           <input type="radio" name="gen" id="gen" value="female" />
-          female
+          Female
         </p></td>
     </tr>
 
 
     <tr>
-    <td>House</td>
+    <td>House Name</td>
     <td>
 
       <input type="text"class="form-control" name="house" id="house" required/>
@@ -55,20 +55,20 @@
   </tr>
 
        <tr>
-    <td>post</td>
+    <td>Post</td>
     <td>
       <input type="text"class="form-control" name="post" id="post" required/>
     </td>
   </tr>
      <tr>
-    <td>city</td>
+    <td>City</td>
     <td>
       <input type="text"class="form-control" name="city" id="city" required/>
     </td>
   </tr>
 
  <tr>
-    <td>email</td>
+    <td>Email</td>
     <td>
 
       <input type="text"class="form-control" name="email" id="email" required/>
@@ -76,7 +76,7 @@
 
   </tr>
  <tr>
-    <td>phone</td>
+    <td>Phone</td>
     <td>
 
       <input type="text"class="form-control" name="phone" id="phone" required/>
@@ -86,7 +86,7 @@
     <td>Dob</td>
     <td>
 
-      <input type="text"class="form-control" name="dob" id="dob" required/>
+      <input type="date"class="form-control" name="dob" id="dob" required/>
     </td>
 
   </tr>
@@ -100,7 +100,7 @@
   </tr>
 
   <tr>
-      <td>sem</td>
+      <td>Semester</td>
       <td><select name="ty" id="ty" required>
       <option value="1">1
        </option>

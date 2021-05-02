@@ -13,8 +13,8 @@
 
 <form id="form2" name="form2" method="post" action="/aa/clg_staff_edit_post/" enctype="multipart/form-data">
      {% csrf_token %}
- <h1 align="center">EDIT STAFF</h1>
-<table  class="table table-bordered" style="width: 400px" align="center" border="0">
+<h2 align="center">EDIT STAFF</h2>
+<table border="1" align="center">
   <tr>
     <td>Name</td>
     <td>
@@ -30,25 +30,25 @@
     <td>
       <p>
 
-        <input type="text"class="form-control" name="dob" id="dob" value="{{ res.dob }}" required/>
+        <input type="date"class="form-control" name="dob" id="dob" value="{{ res.dob }}" required/>
       </p>
     </td>
   </tr>
     <tr>
-        <td>gender</td>
+        <td>Gender</td>
          <td>
           {% if res.gen == "male" %}
 
-          male<input type="radio" name="gen" id="gen1" value="male" checked="checked"/><br/>
+          Male<input type="radio" name="gen" id="gen1" value="male" checked="checked"/><br/>
 
 
-            female<input type="radio" name="gen" id="gen2" value="female" />
+            Female<input type="radio" name="gen" id="gen2" value="female" />
 
         {% else %}
 
-        male<input type="radio" name="gen" id="gen3" value="male"/><br/>
+        Male<input type="radio" name="gen" id="gen3" value="male"/><br/>
 
-        female<input type="radio" name="gen" id="gen4" value="female" checked="checked"/><br/>
+        Female<input type="radio" name="gen" id="gen4" value="female" checked="checked"/><br/>
         {% endif %}
         </td>
       </tr>
@@ -63,20 +63,20 @@
   </tr>
 
        <tr>
-    <td>city</td>
+    <td>City</td>
     <td>
       <input type="text"class="form-control" name="city" value="{{ res.city }}" id="city" required/>
     </td>
   </tr>
      <tr>
-    <td>state</td>
+    <td>State</td>
     <td>
       <input type="text"class="form-control" name="state" id="state" value="{{ res.state }}" required/>
     </td>
   </tr>
 
  <tr>
-    <td>pin</td>
+    <td>PinCode</td>
     <td>
 
       <input type="text"class="form-control" name="pin" id="pin" value="{{ res.pin }}" required/>
@@ -86,9 +86,9 @@
   <tr>
       <td>Type</td>
       <td><select name="ty" id="ty" required>
-      <option value="nonteacher">nonteacher
+      <option value="Physical trainer">Physical trainer
        </option>
-      <option value="teacher">Teacher</option>
+      <option value="Nutritionist">Nutritionist</option>
 
           </select></td>
     </tr>
@@ -104,7 +104,7 @@
   <tr>
 
     <tr>
-    <td>email</td>
+    <td>Email</td>
     <td>
 
       <input type="text" class="form-control"name="email" id="email"required  value="{{ res.email }}" readonly />
@@ -113,7 +113,7 @@
   </tr>
 
 <tr>
-    <td>phone</td>
+    <td>Phone</td>
     <td>
 
       <input type="text" class="form-control"name="phone" id="phone" value="{{ res.phone }}" required />

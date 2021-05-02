@@ -2,28 +2,29 @@
 {% block body %}
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>APROVE OTHER USERS</title>
+<title>Untitled Document</title>
 </head>
 
 <body>
-<form id="form1" name="form1" method="post" action="/aa/adm_careerexp_view/">
-<h1 align="center">APPROVE OTHER USERS</h1>
-    <table class="table table-bordered" style="width: 1000px" align="center" border="0">
-    {% csrf_token %}
-  <tr>
+ <tr>
     <td colspan="2">Type</td>
     <td colspan="2"><label for="textfield"></label>
       <input type="text" name="ser" id="textfield" /></td>
     <td colspan="2"><input type="submit" name="button" id="button" value="Search" /></td>
     </tr>
+<form id="form1" name="form1" method="post" action="/aa/adm_careerexp_view/"><table width="50%" border="0">
+    {% csrf_token %}
+<h2 align="center">APPROVE OTHER USERS</h2>
+<table class="table table-bordered" width="400px"align="center" border="0">
+
   <tr>
     <th>Sl no</th>
     <th>Company Name</th>
     <th>Description</th>
     <th>Phone</th>
     <th>Email id</th>
-      <th>Action</th>
-    <th>&nbsp;</th>
+    <th>Action</th>
+      <th></th>
   </tr>
     {% for i in res %}
   <tr>

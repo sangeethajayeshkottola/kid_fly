@@ -2,16 +2,17 @@
 {% block body %}
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>VIEW SPORTS CATEGORY</title>
+<title>Untitled Document</title>
 </head>
 
 <body>
-<h1 align="center">VIEW SPORTS CATEGORY</h1>
-<table class="table table-bordered" >
+<h2 align="center">VIEW SPORTS CATEGORY</h2>
+<table class="table table-bordered" width="400px"align="center" border="0">
   <tr>
     <th>Slno</th>
     <th>Name</th>
     <th>Description</th>
+      <th>Action</th>
       <th>Action</th>
   </tr>
     {% for i in res %}
@@ -19,7 +20,8 @@
     <td>&nbsp;{{ forloop.counter }}</td>
     <td>{{ i.name }}&nbsp;</td>
     <td>&nbsp;{{ i.description }}</td>
-  <td><a href="/aa/sports_update/{{ i.pk }}" class="btn btn-success">Update</a><br><a href="/aa/sports_del/{{ i.pk }}" class="btn btn-danger">Delete</a> </td>
+  <td><a href="/aa/sports_update/{{ i.pk }}">Update</a>
+      <br><td><a href="/aa/sports_del/{{ i.pk }}">Delete</a> </td>
   </tr>
     {% endfor %}
 </table>
