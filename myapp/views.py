@@ -463,41 +463,53 @@ def clg_staff_add(request):
         email = request.POST['email']
         import random
         rr = random.randint(0000, 9999)
-        if type=="nut":
-            print("qq")
-            b1 = loginmodel(uname=email, pwd=rr, type="nut")
-            b1.save()
-        elif type=="phy":
-            b1 = loginmodel(uname=email, pwd=rr, type="phy")
-            b1.save()
+        #tst
+        from datetime import datetime
+        date_format = "%Y-%m-%d"
+        start = datetime.strptime(dob, date_format)
+        now = datetime.now()
+        if now < start:
+            print("ys")
+            return HttpResponse("Please check Date")
+        else:
+            print("nn")
 
-        ab = loginmodel.objects.latest('id')
-        print("ab=", ab.pk)
+            if type == "nut":
+                print("qq")
+                b1 = loginmodel(uname=email, pwd=rr, type="nut")
+                b1.save()
+            elif type == "phy":
+                b1 = loginmodel(uname=email, pwd=rr, type="phy")
+                b1.save()
 
-        mmss = loginmodel.objects.get(id=ab.pk)
+            ab = loginmodel.objects.latest('id')
+            print("ab=", ab.pk)
 
-        a1 = staffmodel(LOGIN=mmss,name=name22,dob=dob,place=place,gen=gen,image=fs.url(name),COLLEGE=mmss22,city=city,state=state,pin=pin,type=type,email=email,phone=phone)
-        a1.save()
+            mmss = loginmodel.objects.get(id=ab.pk)
 
-        import smtplib
-        from email.mime.multipart import MIMEMultipart
-        from email.mime.text import MIMEText
-        s = smtplib.SMTP(host='smtp.gmail.com', port=587)
-        s.starttls()
-        s.login("rissprjcalicut555@gmail.com", "P09388434043")
-        msg = MIMEMultipart()  # create a message.........."
-        message = "New Passoword"
-        msg['From'] = "rissprjcalicut555@gmail.com"
-        msg['To'] = email
-        msg['Subject'] = "Your Password"
-        body = "Your Password is:- - " + str(rr)
-        msg.attach(MIMEText(body, 'plain'))
-        s.send_message(msg)
-        print("kkkkkk")
+            a1 = staffmodel(LOGIN=mmss, name=name22, dob=dob, place=place, gen=gen, image=fs.url(name), COLLEGE=mmss22,
+                            city=city, state=state, pin=pin, type=type, email=email, phone=phone)
+            a1.save()
 
+            import smtplib
+            from email.mime.multipart import MIMEMultipart
+            from email.mime.text import MIMEText
+            s = smtplib.SMTP(host='smtp.gmail.com', port=587)
+            s.starttls()
+            s.login("rissprjcalicut555@gmail.com", "P09388434043")
+            msg = MIMEMultipart()  # create a message.........."
+            message = "New Passoword"
+            msg['From'] = "rissprjcalicut555@gmail.com"
+            msg['To'] = email
+            msg['Subject'] = "Your Password"
+            body = "Your Password is:- - " + str(rr)
+            msg.attach(MIMEText(body, 'plain'))
+            s.send_message(msg)
+            print("kkkkkk")
 
+        ##ovr
 
-
+        #
         return render(request, "college/home.html")
 
     return render(request, 'college/Staff_add.html')
