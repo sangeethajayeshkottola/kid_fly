@@ -13,10 +13,10 @@
 
 <form id="form2" name="form2" method="post" action="/aa/clg_staff_edit_post/" enctype="multipart/form-data">
      {% csrf_token %}
-<h2 align="center">EDIT STAFF</h2>
-<table border="1" align="center">
+<h2 align="center">STAFF EDIT</h2>
+<table class="table table-bordered"style="width:400px" align="center">
   <tr>
-    <td>Name</td>
+    <td>Staff Name</td>
     <td>
       <p>
 
@@ -26,7 +26,7 @@
   </tr>
 
      <tr>
-    <td>Dob</td>
+    <td>Date Of Birth</td>
     <td>
       <p>
 
@@ -39,16 +39,16 @@
          <td>
           {% if res.gen == "male" %}
 
-          Male<input type="radio" name="gen" id="gen1" value="male" checked="checked"/><br/>
+          male<input type="radio" name="gen" id="gen1" value="male" checked="checked"/><br/>
 
 
-            Female<input type="radio" name="gen" id="gen2" value="female" />
+            female<input type="radio" name="gen" id="gen2" value="female" />
 
         {% else %}
 
-        Male<input type="radio" name="gen" id="gen3" value="male"/><br/>
+        male<input type="radio" name="gen" id="gen3" value="male"/><br/>
 
-        Female<input type="radio" name="gen" id="gen4" value="female" checked="checked"/><br/>
+        female<input type="radio" name="gen" id="gen4" value="female" checked="checked"/><br/>
         {% endif %}
         </td>
       </tr>
@@ -76,7 +76,7 @@
   </tr>
 
  <tr>
-    <td>PinCode</td>
+    <td>pincode</td>
     <td>
 
       <input type="text"class="form-control" name="pin" id="pin" value="{{ res.pin }}" required/>
@@ -86,9 +86,9 @@
   <tr>
       <td>Type</td>
       <td><select name="ty" id="ty" required>
-      <option value="Physical trainer">Physical trainer
+      <option value="nonteacher">nonteacher
        </option>
-      <option value="Nutritionist">Nutritionist</option>
+      <option value="teacher">Teacher</option>
 
           </select></td>
     </tr>
@@ -104,7 +104,7 @@
   <tr>
 
     <tr>
-    <td>Email</td>
+    <td>Email Id</td>
     <td>
 
       <input type="text" class="form-control"name="email" id="email"required  value="{{ res.email }}" readonly />

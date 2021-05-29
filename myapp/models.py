@@ -155,25 +155,23 @@ class eventmodel(models.Model):
 
 
 
-class participantmodel(models.Model):
-    STUDENT = models.ForeignKey(studentmodel, on_delete=models.CASCADE, )
-    EVENT = models.ForeignKey(eventmodel, on_delete=models.CASCADE, )
 
-    class Meta:
-        db_table = "participant"
 ####################
 class usermodel(models.Model):
     LOGIN = models.ForeignKey(loginmodel, on_delete=models.CASCADE, )
+    name = models.CharField(max_length=50)
     cname = models.CharField(max_length=50)
     image = models.CharField(max_length=250)
     ph = models.CharField(max_length=20)
     email = models.CharField(max_length=50)
+
     details = models.CharField(max_length=250)
-    COLLEGE = models.ForeignKey(collegemodel, on_delete=models.CASCADE, )
     desi = models.CharField(max_length=50)
+
+
     utype = models.CharField(max_length=50)
 
-    name = models.CharField(max_length=50)
+
     status=models.CharField(max_length=50)
 
     class Meta:
@@ -222,15 +220,7 @@ class msg_nutitionnist_model(models.Model):
     class Meta:
         db_table = "msg_nutitionist"
 
-class chat(models.Model):
-    message = models.CharField(max_length=300)
-    date = models.CharField(max_length=100)
-    type =  models.CharField(max_length=100)
-    FID = models.ForeignKey(staffmodel, on_delete=models.CASCADE)
-    UID=models.ForeignKey(studentmodel, on_delete=models.CASCADE)
 
-    class Meta:
-        db_table = "chatuser"
 
 
 class eventorgizermodel(models.Model):
@@ -245,3 +235,70 @@ class eventorgizermodel(models.Model):
 
     class Meta:
         db_table = "event_orgizer"
+
+class portfoliomodel(models.Model):
+    STUDENT = models.ForeignKey(studentmodel, on_delete=models.CASCADE, )
+
+    achievement = models.CharField(max_length=250)
+    date= models.CharField(max_length=50)
+    position = models.CharField(max_length=250)
+
+    class Meta:
+        db_table = "portfolio"
+
+class event2model(models.Model):
+
+    date = models.CharField(max_length=50)
+    ename = models.CharField(max_length=50)
+    descri = models.CharField(max_length=250)
+    etype = models.CharField(max_length=250)
+    EVENT_ORG=models.ForeignKey(eventorgizermodel, on_delete=models.CASCADE, )
+
+    class Meta:
+        db_table = "event2"
+
+class participantmodel(models.Model):
+    STUDENT = models.ForeignKey(studentmodel, on_delete=models.CASCADE, )
+    EVENT = models.ForeignKey(eventmodel, on_delete=models.CASCADE, )
+    status = models.CharField(max_length=100)
+
+    class Meta:
+        db_table = "participant"
+
+class participantmodel2(models.Model):
+    STUDENT = models.ForeignKey(studentmodel, on_delete=models.CASCADE, )
+    EVENT = models.ForeignKey(event2model, on_delete=models.CASCADE, )
+    status = models.CharField(max_length=100)
+
+    class Meta:
+        db_table = "participant2"
+
+class chat(models.Model):
+    message = models.CharField(max_length=300)
+    date = models.CharField(max_length=100)
+    type =  models.CharField(max_length=100)
+    FID = models.ForeignKey(collegemodel, on_delete=models.CASCADE)
+    UID=models.ForeignKey(studentmodel, on_delete=models.CASCADE)
+
+    class Meta:
+        db_table = "chat_clg"
+class chat_staff(models.Model):
+    message = models.CharField(max_length=300)
+    date = models.CharField(max_length=100)
+    type =  models.CharField(max_length=100)
+    FID = models.ForeignKey(staffmodel, on_delete=models.CASCADE)
+    UID=models.ForeignKey(studentmodel, on_delete=models.CASCADE)
+
+    class Meta:
+        db_table = "chatuser_staff"
+
+
+class chat_staff_phy(models.Model):
+    message = models.CharField(max_length=300)
+    date = models.CharField(max_length=100)
+    type =  models.CharField(max_length=100)
+    FID = models.ForeignKey(staffmodel, on_delete=models.CASCADE)
+    UID=models.ForeignKey(usermodel, on_delete=models.CASCADE)
+
+    class Meta:
+        db_table = "chat_carrior_staff"

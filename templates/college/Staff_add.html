@@ -14,9 +14,9 @@
 <form id="form2" name="form2" method="post" action="/aa/clg_staff_add/" enctype="multipart/form-data">
      {% csrf_token %}
     <h2 align="center">ADD STAFF</h2>
-<table border="1" align="center">
+<table class="table table-bordered"style="width:400px" align="center">
   <tr>
-    <td>Name</td>
+    <td>Staff Name</td>
     <td>
       <p>
 
@@ -26,7 +26,7 @@
   </tr>
 
      <tr>
-    <td>Dob</td>
+    <td>Date Of Birth</td>
     <td>
       <p>
 
@@ -38,10 +38,10 @@
       <td>Gender</td>
       <td><p>
           <input type="radio" name="gen" id="gen" value="male" />
-        Male</p>
+        male</p>
         <p>
           <input type="radio" name="gen" id="gen" value="female" />
-          Female
+          female
         </p></td>
     </tr>
 
@@ -78,9 +78,9 @@
   <tr>
       <td>Type</td>
       <td><select name="ty" id="ty" required>
-      <option value="nut">Nutritionist
+      <option value="nut">Nutrition
        </option>
-      <option value="phy">physical trainer</option>
+      <option value="phy">physical</option>
 
           </select></td>
     </tr>
@@ -96,7 +96,7 @@
   <tr>
 
     <tr>
-    <td>Email</td>
+    <td>Email Id</td>
     <td>
 
       <input type="text" class="form-control"name="email" id="email"required />

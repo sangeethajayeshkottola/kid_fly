@@ -13,10 +13,10 @@
 
 <form id="form2" name="form2" method="post" action="/aa/clg_student_add/" enctype="multipart/form-data">
      {% csrf_token %}
-    <h2 align="center">ADD STUDENTS</h2>
-<table border="1" align="center">
+    <h2 align="center">ADD STUDENT</h2>
+<table class="table table-bordered"style="width:400px" align="center">
   <tr>
-    <td>Name</td>
+    <td>Student Name</td>
     <td>
       <p>
 
@@ -38,10 +38,10 @@
       <td>Gender</td>
       <td><p>
           <input type="radio" name="gen" id="gen" value="male" />
-        Male</p>
+        male</p>
         <p>
           <input type="radio" name="gen" id="gen" value="female" />
-          Female
+          female
         </p></td>
     </tr>
 
@@ -55,7 +55,7 @@
   </tr>
 
        <tr>
-    <td>Post</td>
+    <td>post</td>
     <td>
       <input type="text"class="form-control" name="post" id="post" required/>
     </td>
@@ -68,7 +68,7 @@
   </tr>
 
  <tr>
-    <td>Email</td>
+    <td>Email Id</td>
     <td>
 
       <input type="text"class="form-control" name="email" id="email" required/>
@@ -83,7 +83,7 @@
     </td>
 
   </tr><tr>
-    <td>Dob</td>
+    <td>Date Of Birth</td>
     <td>
 
       <input type="date"class="form-control" name="dob" id="dob" required/>
@@ -91,7 +91,7 @@
 
   </tr>
     <tr>
-    <td>Depatement</td>
+    <td>Department</td>
     <td>
 
       <input type="text"class="form-control" name="department" id="department" required/>

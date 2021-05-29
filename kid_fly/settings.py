@@ -79,7 +79,7 @@ WSGI_APPLICATION = 'kid_fly.wsgi.application'
 DATABASES = {
     'default': {
            'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'kidz',
+        'NAME': 'kid22',
         'USER': 'root',
         'PASSWORD': '',
     }

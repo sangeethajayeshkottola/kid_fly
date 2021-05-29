@@ -13,24 +13,22 @@
 
 <form id="form1" name="form1" method="post" action="">
 {% csrf_token %}
-<table align="center">
  <tr>
     <td colspan="2">Name</td>
     <td colspan="3"><label for="textfield"></label>
       <input type="text" name="ser" id="textfield" /></td>
     <td colspan="2"><input type="submit" name="button" id="button" value="Search" /></td>
-    </tr></table>
+    </tr>
 <h2 align="center">VIEW STAFF</h2>
-<table class="table table-bordered" width="400px"align="center" border="0">
+<table class="table table-bordered"style="width:400px" align="center">
   <tr>
     <th>Sl no</th>
-    <th>Name</th>
-    <th>Dob</th>
+    <th>Staff Name</th>
+    <th>Date Of Birth</th>
     <th>Gender</th>
     <th>Place</th>
     <th>City</th>
       <th>State</th>
-      <th>Email</th>
       <th>Pincode</th>
       <th>Action</th>
       <th>Action</th>
@@ -46,7 +44,6 @@
     <td>{{ i.city }}</td>
       <td>{{ i.state }}</td>
     <td>{{ i.pin }}</td>
-      <td>{{ i.email }}</td>
     <td><a href="/aa/clg_staff_edit/{{ i.id }}">Edit</a></td>
     <td><a href="/aa/clg_staff_del/{{ i.id }}">Delete</a></td>
 

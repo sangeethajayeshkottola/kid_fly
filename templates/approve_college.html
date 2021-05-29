@@ -6,26 +6,26 @@
 </head>
 
 <body>
-<tr>
-    <td colspan="3">College name</td>
+<form id="form1" name="form1" method="post" action="/aa/adm_college_view/">
+    {% csrf_token %}
+
+  <tr>
+    <td colspan="3">College Name</td>
     <td colspan="4"><label for="textfield"></label>
       <input type="text" name="ser" id="textfield" /></td>
     <td colspan="3"><input type="submit" name="button" id="button" value="search" /></td>
     </tr>
-<form id="form1" name="form1" method="post" action="/aa/adm_college_view/">
-    {% csrf_token %}
 <h2 align="center">APPROVE COLLEGE</h2>
-<table class="table table-bordered" width="400px"align="center" border="0">
-
+<table class="table table-bordered"style="width: 400px"  align="center">
   <tr>
-    <th>Sl no</th>
+    <th>sl no</th>
     <th>Image</th>
     <th>Name</th>
     <th>Place</th>
     <th>Post</th>
     <th>City</th>
     <th>State</th>
-    <th>Phone no</th>
+    <th>Phone Number</th>
     <th>Email</th>
       <th>Action</th>
     <th>&nbsp;</th>

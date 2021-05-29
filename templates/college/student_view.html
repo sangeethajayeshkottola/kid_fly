@@ -14,24 +14,26 @@
 <form id="form1" name="form1" method="post" action="">
 {% csrf_token %}
 
-<table align="center">
- <tr>
-    <td colspan="2">Name</td>
-    <td colspan="3"><label for="textfield"></label>
-      <input type="text" name="ser" id="textfield" /></td>
-    <td colspan="2"><input type="submit" name="button" id="button" value="Search" /></td>
-    </tr></table>
-<h2 align="center">STUDENT VIEW</h2>
-<table class="table table-bordered" width="400px"align="center" border="0">
+<tr>
+
+    <td width="200"><b><i>Student Name</i></b></td>
+    <td width="200">
+      <input type="text" name="ser" id="textfield" class="form-control" /></td>
+    <td width="100"><input type="submit" name="button" id="button" value="Search" class="btn" /></td>
+</tr>
+
+<h2 align="center">VIEW STUDENTS</h2>
+<table class="table table-bordered"style="width:400px" align="center">
+
   <tr>
-    <th>Slno</th>
-    <th>Name</th>
-    <th>Place</th>
+    <th>slno</th>
+    <th>Student Name</th>
+    <th>place</th>
     <th>House Name</th>
-    <th>Post</th>
-    <th>City</th>
-      <th>Email</th>
-      <th>Phone</th>
+    <th>post</th>
+    <th>city</th>
+      <th>Email Id</th>
+      <th>phone</th>
       <th>Action</th>
       <th>Action</th>
       <th></th>

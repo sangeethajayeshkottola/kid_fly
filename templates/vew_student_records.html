@@ -6,26 +6,26 @@
 </head>
 
 <body>
- <tr>
-    <td align="center" colspan="2">Student name</td>
-    <td colspan="3"><label for="textfield"></label>
-      <input type="text" name="ser" id="textfield" /></td>
-    <td align="center" colspan="2"><input type="submit" name="button" id="button" value="Search" /></td>
-    </tr>
 <form id="form1" name="form1" method="post" action="/aa/adm_student_view/">
     {% csrf_token %}
+<tr>
+    <td colspan="2">Student Name</td>
+    <td colspan="3"><label for="textfield"></label>
+      <input type="text" name="ser" id="textfield" /></td>
+    <td colspan="2"><input type="submit" name="button" id="button" value="Search" /></td>
+    </tr>
 <h2 align="center">VIEW STUDENT RECORDS</h2>
-<table class="table table-bordered" width="400px"align="center" border="0">
+<table class="table table-bordered"style="width: 400px"  align="center">
 
   <tr>
     <th>Slno</th>
     <th>Name </th>
-    <th>Email</th>
+    <th>Email Id</th>
     <th>Phone</th>
     <th>Department</th>
     <th>College</th>
-    <th>Action</th>
-      <th></th>
+      <th>Action</th>
+    <th></th>
   </tr>
     {% for i in res %}
   <tr>
@@ -35,7 +35,7 @@
     <td>{{ i.phone }}&nbsp;</td>
     <td>&nbsp;{{ i.department }}</td>
     <td>{{ i.COLLEGE.name }}&nbsp;</td>
-    <td><a href="/aa/adm_student_view_more/{{ i.pk }}">participant</a></td>
+    <td><a href="/aa/adm_student_view_more/{{ i.pk }}">View more</a></td>
   </tr>
     {% endfor %}
 </table>

@@ -8,7 +8,7 @@
 <body>
 <form id="form1" name="form1" method="post" action="">
 <h2 align="center">VIEW NOTIFICATION</h2>
-  <table class="table table-bordered" width="400px"align="center" border="0">
+  <table class="table table-bordered"style="width: 400px"  align="center">
 
     <tr>
       <th>Sl no</th>
@@ -16,12 +16,13 @@
       <th>Date</th>
       <th>Action</th>
       <th>Action</th>
+        <th></th>
     </tr>
       {% for i in res %}
     <tr>
       <td>{{ forloop.counter }}&nbsp;</td>
       <td>&nbsp;{{ i.msg }}</td>
-      <td>{{ i.date }}</td>
+      <td>{{ i.datee }}</td>
       <td><a href="/aa/noti_update/{{ i.pk }}">Edit</a></td>
       <td><a href="/aa/noti_del/{{ i.pk }}">Delete</a></td>
 

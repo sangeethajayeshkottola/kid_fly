@@ -9,46 +9,48 @@
 <form id="form1" name="form1" method="post" action="/aa/adm_college_approve_reject/">
         {% csrf_token %}
     <h2 align="center">APPROVE COLLEGE VIEW MORE</h2>
-<table class="table table-bordered" width="400px"align="center" border="0">
+<table class="table table-bordered"style="width: 400px"  align="center">
   <tr>
     <td colspan="2">&nbsp;</td>
     </tr>
   <tr>
-    <td>Name</td>
+    <th>Name</th>
     <td>&nbsp;{{ i.name }}</td>
   </tr>
   <tr>
-    <td>Place</td>
+    <th>Place</th>
     <td>{{ i.place }}&nbsp;</td>
   </tr>
   <tr>
-    <td>Post</td>
+    <th>Post</th>
     <td>{{ i.post }}&nbsp;</td>
   </tr>
   <tr>
-    <td>City</td>
+    <th>City</th>
     <td>&nbsp;{{ i.city }}</td>
   </tr>
   <tr>
-    <td>State</td>
+    <th>State</th>
     <td>&nbsp;{{ i.state }}</td>
   </tr>
   <tr>
-    <td>Established year</td>
+    <th>Established year</th>
     <td>&nbsp;{{ i.ext_year }}</td>
   </tr>
   <tr>
-    <td>Phone no</td>
+    <th>Phone Number</th>
     <td>{{ i.phone }}&nbsp;</td>
   </tr>
   <tr>
-    <td>Email</td>
+    <th>Email</th>
     <td>&nbsp;{{ i.email }}</td>
   </tr>
   <tr>
-    <td>Status</td>
+    <th>Status</th>
     <td>&nbsp;{{ i.status }}</td>
   </tr>
+
+
   <tr>
     <td><input type="submit" name="btn" id="button" value="Approve" /></td>
     <td><input type="submit" name="btn" id="button2" value="Reject" /></td>

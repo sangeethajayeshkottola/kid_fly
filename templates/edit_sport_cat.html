@@ -8,10 +8,10 @@
 <body>
 <form id="form1" name="form1" method="post" action="/aa/sports_update_post/">
       {% csrf_token %}
-    <h2 align="center">EDIT SPORTS CTEGORY</h2>
-  <table class="table table-bordered" width="400px"align="center" border="0">
+    <h2 align="center">EDIT SPORTS CATEGORY</h2>
+  <table class="table table-bordered"style="width: 400px"  align="center">
     <tr>
-      <td width="36%">Name</td>
+      <td width="36%">Category Name</td>
       <td width="64%">&nbsp;<input type="text"name="sname"id="sname" value="{{ res.name }}" required> </td>
     </tr>
     <tr>

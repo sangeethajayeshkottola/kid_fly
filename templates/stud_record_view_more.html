@@ -8,18 +8,18 @@
 <body>
 <form id="form1" name="form1" method="post" action="">
     <h2 align="center">STUDENT RECORDS VIEW MORE</h2>
-  <table class="table table-bordered" width="400px"align="center" border="0">
+  <table class="table table-bordered"style="width: 400px"  align="center">
     <tr>
       <td colspan="4">&nbsp;</td>
     </tr>
     <tr>
-      <td width="24%">Name</td>
+      <td width="24%">Student Name</td>
       <td width="32%">&nbsp;{{ res.STUDENT.name }}</td>
-      <td width="19%">Event</td>
+      <td width="19%">Event Name</td>
       <td width="25%">&nbsp;{{ res.EVENT.etype }}</td>
     </tr>
     <tr>
-      <td>House name</td>
+      <td>House Name</td>
       <td>&nbsp;{{ res.STUDENT.house }}</td>
       <td></td>
       <td>&nbsp;</td>
@@ -46,7 +46,7 @@
       <td>{{ res.STUDENT.gen }}&nbsp;</td>
     </tr>
     <tr>
-      <td>Dob</td>
+      <td>Date Of Birth</td>
       <td>&nbsp;{{ res.STUDENT.dob }}</td>
     </tr>
     <tr>
@@ -62,7 +62,7 @@
       <td>&nbsp;{{ res.STUDENT.phone }}</td>
     </tr>
     <tr>
-      <td>Email</td>
+      <td>Email Id</td>
       <td>&nbsp;{{ res.STUDENT.email }}</td>
     </tr>
   </table>

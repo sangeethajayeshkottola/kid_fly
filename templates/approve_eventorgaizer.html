@@ -6,19 +6,18 @@
 </head>
 
 <body>
- <tr>
-    <td colspan="2">Type</td>
+<form id="form1" name="form1" method="post" action="/aa/adm_evntorgr_view/">
+{% csrf_token %}
+    <tr>
+    <td colspan="2">Event Organisers</td>
     <td colspan="2"><label for="textfield"></label>
       <input type="text" name="ser" id="textfield" /></td>
     <td colspan="2"><input type="submit" name="button" id="button" value="Search" /></td>
     </tr>
-<form id="form1" name="form1" method="post" action="/aa/adm_evntorgr_view/"><table width="50%" border="0">
-    {% csrf_token %}
 <h2 align="center">APPROVE EVENT ORGANIZERS</h2>
-<table class="table table-bordered" width="400px"align="center" border="0">
-
+    <table class="table table-bordered"style="width: 400px"  align="center">
   <tr>
-
+    <th>Sl no</th>
     <th>Name</th>
     <th>Description</th>
     <th>Phone</th>

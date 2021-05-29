@@ -8,8 +8,8 @@
 <body>
 <form id="form1" name="form1" method="post" action="/aa/adm_evntorgr_approve_reject/">
         {% csrf_token %}
-    <h2 align="center">APPROVE EVENT ORGANIZERS VIEW MORE</h2>
-  <table class="table table-bordered" width="400px"align="center" border="0">
+    <h2 align="center">EVENT ORGANIZERS VIEW MORE</h2>
+  <table class="table table-bordered"style="width: 400px"  align="center">
     <tr>
       <td colspan="2">&nbsp;</td>
     </tr>
@@ -31,6 +31,7 @@
       <td>Email id</td>
       <td>{{ i.email }}&nbsp;</td>
     </tr>
+
     <tr>
       <td><input type="submit" name="btn" id="button" value="Approve" /></td>
       <td><input type="submit" name="btn" id="button2" value="Reject" /></td>
